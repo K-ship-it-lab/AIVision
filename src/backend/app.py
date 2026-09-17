@@ -227,7 +227,7 @@ def generate_data():
         for _ in range(500):
             base = random.uniform(0, 100)
             db.session.add(AIData(
-                timestamp=datetime.utcnow() - timedelta(hours=random.randint(0, 720)),
+                timestamp=datetime.now(UTC) - timedelta(hours=random.randint(0, 720)),
                 feature1=round(base + random.uniform(-10, 10), 2),
                 feature2=round(base * 0.8 + random.uniform(-15, 15), 2),
                 feature3=round(base * 1.2 + random.uniform(-5, 5), 2),
